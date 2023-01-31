@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/be7c1778-9847-4ce5-8da3-c2156bc3be3a/AppServices/subscriptions/be7c1778-9847-4ce5-8da3-c2156bc3be3a/resourceGroups/newrg/providers/Microsoft.Web/sites/tejasreefrontend",
+    "appService.deploySubpath": "."
+}

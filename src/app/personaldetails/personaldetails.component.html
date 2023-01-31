@@ -1,0 +1,45 @@
+<section class="wrapper m-lg-5">
+    <div class="container">
+        <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
+
+                <form class="rounded bg-white shadow py-5 px-4"  #userForm="ngForm" (ngSubmit)="saveUser(userForm)" #checkForm="ngForm"  (ngSubmit)="userDetails(checkForm.value)">
+                    <h2 class="text-dark fw-bolder fs-4 mb-5">User Details</h2>
+
+                    <div class="form-floating mb-3">
+                        <input type="fullName" class="form-control" id="fullName" placeholder="enter full name" name="fullName" #fullName='ngModel' ngModel required>
+                        <label for="floatingInput">Full Name</label>
+                        <span *ngIf="!fullName.valid && fullName.touched" style="color: red;">
+                            *Please enter a valid input </span><br>
+                    </div>
+
+                        
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" #email='ngModel' ngModel required>
+                        <label for="floatingInput">Email</label>
+                        <span *ngIf="!email.valid && email.touched" style="color: red;">
+                            *Please enter a valid input </span><br>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="password" #password='ngModel' ngModel required>
+                        <label for="floatingPassword">Password</label>
+                        <span *ngIf="!password.valid && password.touched" style="color: red;">
+                            *Please enter a valid input </span><br>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="mobileNo" class="form-control" id="mobileNo" placeholder="Enter 10 digit mobile no" name="mobileNo" #mobileNo='ngModel' ngModel required>
+                        <label for="floatingInput">Mobile No</label>
+                        <span *ngIf="!mobileNo.valid && mobileNo.touched" style="color: red;">
+                            *Please enter a valid input </span><br>
+                    </div>
+
+                    <div class="text-center">
+                        <button [disabled]="checkForm.invalid" type="submit" value="submit" class="btn btn-primary btn--radius-2 btn--red">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+
+
+

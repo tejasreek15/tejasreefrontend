@@ -1,0 +1,30 @@
+<section class="wrapper m-lg-5">
+    <div class="container">
+        <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
+            <form class="rounded bg-white shadow py-5 px-4" #userloginForm="ngForm" (ngSubmit)="userLogin(userloginForm)">
+                <h3 class="text-dark fw-bolder fs-4 mb-5">Login In</h3>
+                <h6>New User?<a href="/personaldetails">Create Account</a></h6>
+                <br/>
+              
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" #email='ngModel' ngModel required>
+                    <label for="floatingInput">User Name</label>
+                    <span *ngIf="!email.valid && email.touched" style="color: red;">
+                        *Please enter a valid input </span><br>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password" name="password" #password='ngModel' ngModel required>
+                    <label for="floatingPassword">Password</label>
+                    <span *ngIf="!password.valid && password.touched" style="color: red;">
+                        *Please enter a valid input </span><br>
+                </div>
+                <div class="col-lg-6 w-100 d-lg-flex">
+                    <button type="reset" value="LOGIN" class="btn btn-primary submit_btn w-100 my-4 me-5">Reset</button>
+                    <button type="submit" value="LOGIN" class="btn btn-primary submit_btn w-100 my-4">Log In</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+  </section>
+

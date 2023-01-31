@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <script src="https://use.fontawesome.com/72f3d00eee.js"></script>
+</head>
+  <!--header area end-->
+  <!--sidebar start-->
+  <body>
+    <marquee style="color: red;"><h3>Welcome to SmartGig Technologies Pvt.Ltd</h3></marquee>
+  </body>
+  <div class="sidebar" style="margin-top:60px;">
+    
+      <img src="../../assets/img.png"  class="profile_image" alt="">
+      <div class="left_area">
+        <h3>Profile</h3>
+      </div>
+  </div>
+  </html>
+<br/>
+  <div class="card-heading">
+    <h1 class="text-center m-5">Welcome User</h1>
+  </div>
+  <a href="/home" class="logout_btn" >Log Out</a>
+  <h4 class="text-center m-5">
+    Enter Your Email<input type="text" [(ngModel)]="srchText">
+    <button (click)="search()">search</button>
+  </h4>
+  <br/>
+<div class="text-center m-5">
+<table class="table table-striped">
+    <tr>
+        <td>Full Name</td>
+        <td>Mobile No</td>
+        <td>Email Id</td>
+
+        <tr *ngFor="let user of userList; let i=index">
+            <td>{{user.fullName}}</td>
+            <td>{{user.mobileNo}}</td>
+            <td>{{user.email}}</td>
+    </tr>
+    </table> 
+</div>
+
