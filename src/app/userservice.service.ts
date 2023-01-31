@@ -10,7 +10,7 @@ export class UserserviceService {
 
   constructor(private myhttp:HttpClient) { }
 
-  restUrl: string ="https://tejasreebackend.azurewebsites.net";
+  restUrl: string = "https://tejasreebackend11.azurewebsites.net";
 
   addUser(user:User)
   {
